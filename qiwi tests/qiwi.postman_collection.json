@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "20cadfd5-891a-4741-a831-2f7f1237ebd9",
+		"name": "qiwi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38025321"
+	},
+	"item": [
+		{
+			"name": "получить все платежи",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-test.qiwi.com/partner/payout/v1/agents/acme/points/00001/payments",
+					"protocol": "https",
+					"host": [
+						"api-test",
+						"qiwi",
+						"com"
+					],
+					"path": [
+						"partner",
+						"payout",
+						"v1",
+						"agents",
+						"acme",
+						"points",
+						"00001",
+						"payments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "запрос баланса",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-test.qiwi.com/partner/payout/v1/agents/acme/points/00001/balance",
+					"protocol": "https",
+					"host": [
+						"api-test",
+						"qiwi",
+						"com"
+					],
+					"path": [
+						"partner",
+						"payout",
+						"v1",
+						"agents",
+						"acme",
+						"points",
+						"00001",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "создание заявки на платеж",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"recipientDetails\": {\r\n    \"providerCode\": \"MTS\",\r\n    \"fields\": {\r\n      \"account\": \"79123456789\"\r\n    }\r\n  },\r\n  \"amount\": {\r\n    \"value\": \"1.00\",\r\n    \"currency\": \"RUB\"\r\n  },\r\n  \"customer\": {\r\n    \"account\": \"#12345\",\r\n    \"email\": \"usermail@mail.mail\",\r\n    \"phone\": \"9123456789\"\r\n  },\r\n  \"source\": {\r\n    \"paymentType\": \"WITH_EXTRA_CHARGE\",\r\n    \"paymentToolType\": \"CASH\",\r\n    \"paymentTerminalType\": \"ATM_CASH_IN\",\r\n    \"paymentDate\": \"2018-11-27T14:02:35.589+03:00\",\r\n    \"extraCharge\": {\r\n      \"value\": \"1.00\",\r\n      \"currency\": \"RUB\"\r\n    }\r\n  },\r\n  \"callbackUrl\": \"https://domain/path\",\r\n  \"IdentificationType\": \"NONE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-test.qiwi.com/partner/payout/v1/agents/acme/points/00001/payments/c0d85b0b-a528-9c66-4a15-cb7a12eda9d6",
+					"protocol": "https",
+					"host": [
+						"api-test",
+						"qiwi",
+						"com"
+					],
+					"path": [
+						"partner",
+						"payout",
+						"v1",
+						"agents",
+						"acme",
+						"points",
+						"00001",
+						"payments",
+						"c0d85b0b-a528-9c66-4a15-cb7a12eda9d6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "исполнение заявки на платеж",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api-test.qiwi.com/partner/payout/v1/agents/acme/points/00001/payments/c0d85b0b-a528-9c66-4a15-cb7a12eda9d6/execute",
+					"protocol": "https",
+					"host": [
+						"api-test",
+						"qiwi",
+						"com"
+					],
+					"path": [
+						"partner",
+						"payout",
+						"v1",
+						"agents",
+						"acme",
+						"points",
+						"00001",
+						"payments",
+						"c0d85b0b-a528-9c66-4a15-cb7a12eda9d6",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
