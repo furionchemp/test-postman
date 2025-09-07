@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Иванов Иван Иванович",
+    "yearOfBirth": 1990,
+    "children": [
+      {
+        "name": "Маша",
+        "yearOfBirth": 2010
+      },
+      {
+        "name": "Коля",
+        "yearOfBirth": 2020
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Смирнова Виктория",
+    "yearOfBirth": 1995,
+    "children": [
+      {
+        "name": "Катя",
+        "yearOfBirth": 2015
+      },
+      {
+        "name": "Настя",
+        "yearOfBirth": 2020
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Петров Петр Петрович",
+    "yearOfBirth": 2000,
+    "children": []
+  }
+]
